@@ -25,32 +25,33 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
 
-		<title>EM Fingerprints</title>
+		<title>VRecKey - NDSS25</title>
 	</head>
 	<body>
 		<div class = "global_container">
 			<div class = "section"  >
 
-				<h1>EM Fingerprints: Attack In-Display Fingerprint Sensors via Electromagnetic (EM) Side Channel</h1>
+				<h1>VRecKey: Non-intrusive and Unconstrained Keystroke Inference in VR Platforms via Infrared Side Channel</h1>
 				<div class ="boxed">
 					<p> 
-						Recently, in-display fingerprint sensors have been widely adopted in newly-released smartphones. However, we find this new technique can leak information about the user’s fingerprints during a
-						screen-unlocking process via the electromagnetic (EM) side channel that can be exploited for fingerprint recovery. We propose FPLogger to demonstrate the feasibility of this novel side-channel attack. Specifically, it leverages the emitted EM emanations whe the user presses the in-display fingerprint sensor to extract fingerprint information, then maps the captured EM signals to fingerprint images and develops 3D fingerprint pieces to spoof and unlock the smartphones.
+						Virtual Reality (VR) technologies are increasingly employed in numerous applications across various areas.
+						Therefore, it is essential to ensure the security of interactions between users and VR devices.
+						In this paper, we disclose a new side-channel leakage in the constellation tracking system of mainstream VR platforms, where the infrared (IR) signals emitted from the VR controllers for controller-headset interactions can be maliciously exploited to reconstruct unconstrained input keystrokes on the virtual keyboard non-intrusively.
+						We propose a novel keystroke inference attack named VRecKey to demonstrate the feasibility and practicality of this novel infrared side channel.
+						Specifically, VRecKey leverages a customized 2D IR sensor array to intercept ambient IR signals emitted from VR controllers and subsequently infers (i) character-level key presses on the virtual keyboard and (ii) word-level keystrokes along with their typing trajectories.
+						We extensively evaluate the effectiveness of VRecKey with two commercial VR devices, and the results indicate that it can achieve over 94.2% and 90.5% top-3 accuracy in inferring character-level and word-level keystrokes with varying lengths, respectively.
+						In addition, empirical results show that VRecKey is resilient to several practical impact factors and presents effectiveness in various real-world scenarios, which provides a complementary and orthogonal attack surface for the exploration of keystroke inference attacks in VR platforms.
 					</p>
-					<p style="font-size:20px; text-align: center"><a href="./assets/FPLogger_CCS23.pdf" class="myButton" target="_blank">Paper</a>
+					<br>
+					<p style="font-size:20px; text-align: center"><a href="#" class="myButton" target="_blank">Paper</a>
+					<a href="#" class="myButton" target="_blank">Code & Dataset</a>
 					<a href="#bibtex" data-toggle="collapse" role="button" class="myButton">Cite <i class="fa fa-quote-right" aria-hidden="true"></i></a></p>
 					<!--div id="paper" style="margin-top: 1.5em;" class="collapse" align="left">
 					<pre style="white-space: pre">
 					to be updated...
 					</pre></div-->
 				<div id="bibtex" style="margin-top: 1.5em;" class="collapse" align="left">
-					<pre style="white-space: pre">@inproceedings{ni2023recovering,
-    title={Recovering Fingerprints from In-Display Fingerprint Sensors via Electromagnetic Side Channel},
-    author={Ni, Tao and Zhang, Xiaokuan and Zhao, Qingchuan},
-    booktitle={Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security},
-    pages={253--267},
-    year={2023}
-}</pre></div>
+					<pre style="white-space: pre">TBD</pre></div>
 						</div>
 
 				<h3>Recent News</h3>
@@ -59,38 +60,37 @@
 						<li class="question">
 					<p class="answer">
 						<ul>
-								<li class="answer">&nbsp; <strong>[Mar. 2024] Samsung Mobile Security and Xiaomi have assigned security analysts to assess FPLogger vulnerability for further discussion.</strong></li>
+								<!-- <li class="answer">&nbsp; <strong>[Mar. 2024] Samsung Mobile Security and Xiaomi have assigned security analysts to assess FPLogger vulnerability for further discussion.</strong></li>
 								<li class="answer">&nbsp; <strong>[Nov. 2023] Our vulnerability reports were acknowledged by smartphone vendors, including Samsung, Xiaomi, OPPO, and OnePlus!</strong></li>
-								<li class="answer">&nbsp; <strong>[Oct. 2023] <a href="https://www.goodix.com" style="color:black" target="_blank">GOODiX</a> contacts us for future collaboration regarding this vulnerability.</strong></li>
-								<li class="answer">&nbsp; <strong>[Aug. 2023] Our paper has been accpeted by ACM CCS 2023!</strong></li>
-								<li class="answer">&nbsp; <strong>[May 2023] Our paper has been submitted to ACM CCS 2023 (Round 2).</strong></li>
+								<li class="answer">&nbsp; <strong>[Oct. 2023] <a href="https://www.goodix.com" style="color:black" target="_blank">GOODiX</a> contacts us for future collaboration regarding this vulnerability.</strong></li> -->
+								<li class="answer">&nbsp; <strong>[Nov. 2024] Our revised paper has been accpeted by NDSS 2025!</strong></li>
+								<li class="answer">&nbsp; <strong>[Sept. 2024] Our paper has received a Major Revision in NDSS 2025.</strong></li>
+								<li class="answer">&nbsp; <strong>[July 2024] Our paper has been submitted to NDSS 2025.</strong></li>
 						</ul>
 					</p>
 				</li>
 				</ul>
 
 				<br>
-				<h3>Demo of Attacks</h3>
+				<h3>Real-world Attack Scenarios</h3>
 
 				<div class="container">
 					<div class="column">
-						<h4>Attack OnePlus 10 Pro</h4>
-						<video width="400" controls>
-							<source src="assets/oneplus_demo.mp4" type="video/mp4">
-							Your browser does not support the video tag.
-						</video>
+						<h4>Concealed Attack</h4>
+						<img src="assets/scenario1_settings-1.png" width="266" alt="Concealed Attack">
 					</div>
 					<div class="column">
-						<h4>Attack Redmi K20 Pro</h4>
-						<video width="400" controls>
-							<source src="assets/redmi_demo.mp4" type="video/mp4">
-							Your browser does not support the video tag.
-						</video>
+						<h4>Reflection-based Attack</h4>
+						<img src="assets/scenario2_settings-1.png" width="266" alt="Reflection-based Attack">
+					</div>
+					<div class="column">
+						<h4>Low-visibility Attack</h4>
+						<img src="assets/scenario3_settings-1.png" width="266" alt="Low-visibility Attack">
 					</div>
 				</div>
 
 				<br><br>
-				<h3>Ethical Consideration</h3>
+				<!-- <h3>Ethical Consideration</h3>
 				<div class="section">
 					<div class="boxed">
 				    <p>
@@ -99,19 +99,19 @@
 				      public dataset for scientific research (SOCOFing), and these pieces are only used for fingerprint registration and unlocking the smartphone to collect EM emanations for empirical evaluations.
 				    </p>
 				  </div>
-				</div>
+				</div> -->
 
 
-				<h3>Public Fingerprint Dataset <a href = "https://www.kaggle.com/datasets/ruizgara/socofing" class="myButton">SOCOFing</a></h3>
+				<!-- <h3>Public Fingerprint Dataset <a href = "https://www.kaggle.com/datasets/ruizgara/socofing" class="myButton">SOCOFing</a></h3>
 					<div class="section">
 					<div class="boxed">
 						<p>
 							Sokoto Coventry Fingerprint Dataset (SOCOFing) is a biometric fingerprint database designed for academic research purposes. SOCOFing contains 6,000 fingerprint images from 600 African subjects and contains unique attributes such as labels for gender, hand and finger name as well as synthetically altered versions with three different levels of alteration for obliteration, central rotation, and z-cut.
 						</p>
 					</div>
-				</div>
+				</div> -->
 
-				<h3>Appendix A - Notations in ASE Feature Extraction</h3>
+				<!-- <h3>Appendix A - Notations in ASE Feature Extraction</h3>
 					<div class="section">
 						<div class="boxed">
 							<table>
@@ -370,7 +370,7 @@
 							</table>
 						</div>
 					</div>
-				</div>
+				</div> -->
 					<!--ul>
 						<li class="question">
 							<b> How does GhostTalk work?</b>

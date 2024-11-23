@@ -86,7 +86,7 @@ h1 {
 	font-family: Arial;
 	font-weight: bold;
 	font-size: 32pt;
-	color: #800080;
+	color: #1591ea;
 	padding-bottom: 13px;
 	padding-top: 5px;
 }
@@ -98,7 +98,7 @@ h2 {
 	font-family: Arial;
 	font-weight: bold;
 	font-size: 28pt;
-	color: #800080;
+	color: #1591ea;
 	padding-bottom: 13px;
 }
 
@@ -107,7 +107,7 @@ h3 {
 	font-family: Arial;
 	font-weight: bold;
 	font-size: 22pt;
-	color: #800080;
+	color: #1591ea;
 	padding-bottom: 13px;
 }
 
@@ -116,7 +116,7 @@ h4 {
 	font-family: Arial;
 	font-weight: bold;
 	font-size: 14pt;
-	color: #800080;
+	color: #1591ea;
 	padding-bottom: 13px;
 }
 
@@ -205,7 +205,7 @@ li {
 }
 
 .custom-column {
-  flex-basis: 50%;
+  flex-basis: 33%;
 }
 
 .custom-column p {
@@ -253,7 +253,7 @@ p, ul {
 	text-decoration:none;
 }
 .myButton {
-	 background-color:#800080;
+	 background-color:#1591ea;
 	-moz-border-radius:10px;
 	-webkit-border-radius:10px;
 	border-radius:10px;
@@ -298,6 +298,6 @@ th, td {
 }
 
 .share-icon {
-  color: #800080;
+  color: #1591ea;
   cursor: pointer;
 }
