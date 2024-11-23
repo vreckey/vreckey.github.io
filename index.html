@@ -1,0 +1,454 @@
+
+<html>
+	<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1XTFM65VS2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1XTFM65VS2');
+</script>
+	<meta charset=“UTF-8”>
+
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:400,bold,900,600">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		  <!-- Custom styles for this template -->
+ 		<link href="css/custom.css" rel="stylesheet">
+
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+ 	 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ 	 	<!-- Add this link in the <head> section of your HTML document -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+
+		<title>EM Fingerprints</title>
+	</head>
+	<body>
+		<div class = "global_container">
+			<div class = "section"  >
+
+				<h1>EM Fingerprints: Attack In-Display Fingerprint Sensors via Electromagnetic (EM) Side Channel</h1>
+				<div class ="boxed">
+					<p> 
+						Recently, in-display fingerprint sensors have been widely adopted in newly-released smartphones. However, we find this new technique can leak information about the user’s fingerprints during a
+						screen-unlocking process via the electromagnetic (EM) side channel that can be exploited for fingerprint recovery. We propose FPLogger to demonstrate the feasibility of this novel side-channel attack. Specifically, it leverages the emitted EM emanations whe the user presses the in-display fingerprint sensor to extract fingerprint information, then maps the captured EM signals to fingerprint images and develops 3D fingerprint pieces to spoof and unlock the smartphones.
+					</p>
+					<p style="font-size:20px; text-align: center"><a href="./assets/FPLogger_CCS23.pdf" class="myButton" target="_blank">Paper</a>
+					<a href="#bibtex" data-toggle="collapse" role="button" class="myButton">Cite <i class="fa fa-quote-right" aria-hidden="true"></i></a></p>
+					<!--div id="paper" style="margin-top: 1.5em;" class="collapse" align="left">
+					<pre style="white-space: pre">
+					to be updated...
+					</pre></div-->
+				<div id="bibtex" style="margin-top: 1.5em;" class="collapse" align="left">
+					<pre style="white-space: pre">@inproceedings{ni2023recovering,
+    title={Recovering Fingerprints from In-Display Fingerprint Sensors via Electromagnetic Side Channel},
+    author={Ni, Tao and Zhang, Xiaokuan and Zhao, Qingchuan},
+    booktitle={Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security},
+    pages={253--267},
+    year={2023}
+}</pre></div>
+						</div>
+
+				<h3>Recent News</h3>
+
+				<ul>
+						<li class="question">
+					<p class="answer">
+						<ul>
+								<li class="answer">&nbsp; <strong>[Mar. 2024] Samsung Mobile Security and Xiaomi have assigned security analysts to assess FPLogger vulnerability for further discussion.</strong></li>
+								<li class="answer">&nbsp; <strong>[Nov. 2023] Our vulnerability reports were acknowledged by smartphone vendors, including Samsung, Xiaomi, OPPO, and OnePlus!</strong></li>
+								<li class="answer">&nbsp; <strong>[Oct. 2023] <a href="https://www.goodix.com" style="color:black" target="_blank">GOODiX</a> contacts us for future collaboration regarding this vulnerability.</strong></li>
+								<li class="answer">&nbsp; <strong>[Aug. 2023] Our paper has been accpeted by ACM CCS 2023!</strong></li>
+								<li class="answer">&nbsp; <strong>[May 2023] Our paper has been submitted to ACM CCS 2023 (Round 2).</strong></li>
+						</ul>
+					</p>
+				</li>
+				</ul>
+
+				<br>
+				<h3>Demo of Attacks</h3>
+
+				<div class="container">
+					<div class="column">
+						<h4>Attack OnePlus 10 Pro</h4>
+						<video width="400" controls>
+							<source src="assets/oneplus_demo.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					</div>
+					<div class="column">
+						<h4>Attack Redmi K20 Pro</h4>
+						<video width="400" controls>
+							<source src="assets/redmi_demo.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					</div>
+				</div>
+
+				<br><br>
+				<h3>Ethical Consideration</h3>
+				<div class="section">
+					<div class="boxed">
+				    <p>
+				      We take ethical considerations seriously. Since fingerprints are very sensitive biometric information, illegally collecting from human participants may cause severe consequences and violate laws. Therefore, as a proof-of-concept work, we construct 3D fingerprints from real fingerprint images through 3D printing technique. <img src="assets/3d_fingerprints.png" width="50" height="50">
+				      All fingerprint pieces are built via a 3D printer using fingerprint images from a
+				      public dataset for scientific research (SOCOFing), and these pieces are only used for fingerprint registration and unlocking the smartphone to collect EM emanations for empirical evaluations.
+				    </p>
+				  </div>
+				</div>
+
+
+				<h3>Public Fingerprint Dataset <a href = "https://www.kaggle.com/datasets/ruizgara/socofing" class="myButton">SOCOFing</a></h3>
+					<div class="section">
+					<div class="boxed">
+						<p>
+							Sokoto Coventry Fingerprint Dataset (SOCOFing) is a biometric fingerprint database designed for academic research purposes. SOCOFing contains 6,000 fingerprint images from 600 African subjects and contains unique attributes such as labels for gender, hand and finger name as well as synthetically altered versions with three different levels of alteration for obliteration, central rotation, and z-cut.
+						</p>
+					</div>
+				</div>
+
+				<h3>Appendix A - Notations in ASE Feature Extraction</h3>
+					<div class="section">
+						<div class="boxed">
+							<table>
+							  <caption></caption>
+							  <thead>
+							    <tr>
+							      <th>Notation</th>
+							      <th>Description</th>
+							      <th>Setting</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							    <tr>
+							      <td><i>f</i></td>
+							      <td>Sampling frequency</td>
+							      <td>20<i>kHz</i></td>
+							    </tr>
+							    <tr>
+							      <td><i>rf</i></td>
+							      <td>Resolution of target fingerprint images </td>
+							      <td>64<i>dpi</i></td>
+							    </tr>
+							    <tr>
+							      <td><i>i, j</i></td>
+							      <td>Starting and ending indices of a signal frame</td>
+							      <td>0, 1, 2, ...</td>
+							    </tr>
+							    <tr>
+							      <td><i>e i,j(t)</i></td>
+							      <td>Envelope data between <i>i</i> and <i>j</i> at time <i>t</i> </td>
+							      <td><i>i+0.001f=j</i></td>
+							    </tr>
+							    <tr>
+							      <td><i>eL i, j(t)</i> and <i>eU i, j(t)</i></td>
+							      <td>Lower bound and upper bound of <i>e i, j(t)</i></td>
+							      <td><i>i+0.001f=j</i></td>
+							    </tr>
+							    <tr>
+							      <td><i>eF i, j(t)</i></td>
+							      <td>Extracted ase feature from <i>e i, j(t)</i></td>
+							      <td><i>i+0.001f=j</i></td>
+							    </tr>
+							    <tr>
+							      <td>nF and lF</td>
+							      <td>Segments and length of the moving binning window</td>
+							      <td>-, 0.002</td>
+							    </tr>
+							  </tbody>
+							</table>
+						</div>
+					</div>
+
+				<h3>Appendix B - Smartphones with In-Display Fingerprint Sensors</h3>
+					<div class="section">
+						<div class="boxed">
+							<table>
+							  <caption></caption>
+							  <thead>
+							    <tr>
+							      <th>Commodity Smartphone</th>
+							      <th>Optical-based</th>
+							      <th>Ultrasonic-based</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							    <tr>
+							      <td>OnePlus 10 Pro</td>
+							      <td>&#x2714;</td>
+							      <td>&#x2718;</td>
+							    </tr>
+							    <tr>
+							      <td>OPPO A96</td>
+							      <td>&#x2714;</td>
+							      <td>&#x2718;</td>
+							    </tr>
+							    <tr>
+							      <td>Xiaomi Redmi K20 Pro</td>
+							      <td>&#x2714;</td>
+							      <td>&#x2718;</td>
+							    </tr>
+							    <tr>
+							      <td>Huawei P30 Pro</td>
+							      <td>&#x2714;</td>
+							      <td>&#x2718;</td>
+							    </tr>
+							    <tr>
+							      <td>OnePlus Nord 2T</td>
+							      <td>&#x2714;</td>
+							      <td>&#x2718;</td>
+							    </tr>
+							    <tr>
+							      <td>Realme GT 2 Pro 5G</td>
+							      <td>&#x2714;</td>
+							      <td>&#x2718;</td>
+							    </tr>
+							    <tr>
+							      <td>OPPO Reno 8 Pro</td>
+							      <td>&#x2714;</td>
+							      <td>&#x2718;</td>
+							    </tr>
+							    <tr>
+							      <td>Google Pixel 6a</td>
+							      <td>&#x2714;</td>
+							      <td>&#x2718;</td>
+							    </tr>
+							    <tr>
+							      <td>Vivo V25 Pro 5G</td>
+							      <td>&#x2714;</td>
+							      <td>&#x2718;</td>
+							    </tr>
+							    <tr>
+							      <td>Moto G72</td>
+							      <td>&#x2714;</td>
+							      <td>&#x2718;</td>
+							    </tr>
+							    <tr>
+							      <td>Honor Magic 2</td>
+							      <td>&#x2714;</td>
+							      <td>&#x2718;</td>
+							    </tr>
+							    <tr>
+							      <td>Meizu 16 Plus</td>
+							      <td>&#x2714;</td>
+							      <td>&#x2718;</td>
+							    </tr>
+							    <tr>
+							      <td>Huawei Mate 20 Pro</td>
+							      <td>&#x2714;</td>
+							      <td>&#x2718;</td>
+							    </tr>
+							    <tr>
+							      <td>Vivo V11 Pro</td>
+							      <td>&#x2714;</td>
+							      <td>&#x2718;</td>
+							    </tr>
+							    <tr>
+							      <td>Lenovo Z5 Pro</td>
+							      <td>&#x2714;</td>
+							      <td>&#x2718;</td>
+							    </tr>
+							    <tr>
+							      <td>OPPO R17 Neo</td>
+							      <td>&#x2714;</td>
+							      <td>&#x2718;</td>
+							    </tr>
+							    <tr>
+							      <td>Google Pixel 7 Pro</td>
+							      <td>&#x2714;</td>
+							      <td>&#x2718;</td>
+							    </tr>
+							    <tr>
+							      <td>Samsung Galaxy S10</td>
+							      <td>&#x2718;</td>
+							      <td>&#x2714;</td>
+							    </tr>
+							    <tr>
+							      <td>Samsung Galaxy S22</td>
+							      <td>&#x2718;</td>
+							      <td>&#x2714;</td>
+							    </tr>
+							    <tr>
+							      <td>iQOO 9 Pro</td>
+							      <td>&#x2718;</td>
+							      <td>&#x2714;</td>
+							    </tr>
+							  </tbody>
+							</table>
+						</div>
+					</div>
+
+				<h3>Appendix C - Comparison Table</h3>
+					<div class="section">
+						<div class="boxed">
+							<p>Relevant side-channel attacks on different smartphone unlocking systems. FPLogger is the <i>first</i> work to attack in-display fingerprint sensors in newly-released smartphones.</p>
+							<table>
+							  <caption></caption>
+							  <thead>
+							    <tr>
+							      <th>Attack</th>
+							      <th>Unlocking System</th>
+							      <th>Side Channel</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							    <tr>
+							      <td>Charger-Surfing&nbsp;&nbsp;<a href="https://www.usenix.org/system/files/sec21-cronin.pdf" target="_blank"><i class="fas fa-share-alt share-icon"></i></a></td>
+							      <td>Numeric passcode</td>
+							      <td>Charging current</td>
+							    </tr>
+							    <tr>
+							      <td>Periscope&nbsp;&nbsp;<a href="https://dl.acm.org/doi/pdf/10.1145/3460120.3484549" target="_blank"><i class="fas fa-share-alt share-icon"></i></a></td>
+							      <td>Numeric passcode</td>
+							      <td>EM emanations</td>
+							    </tr>
+							    <tr>
+							      <td>WindTalker&nbsp;&nbsp;<a href="https://dl.acm.org/doi/10.1145/2976749.2978397" target="_blank"><i class="fas fa-share-alt share-icon"></i></a></td>
+							      <td>Numeric passcode</td>
+							      <td>RF (Wi-Fi) signals</td>
+							    </tr>
+							    <tr>
+							      <td>KeyListener&nbsp;&nbsp;<a href="https://ieeexplore.ieee.org/document/8737591" target="_blank"><i class="fas fa-share-alt share-icon"></i></a></td>
+							      <td>Alphabetic passwords</td>
+							      <td>Acoustic</td>
+							    </tr>
+							    <tr>
+							      <td>EM-Surfing&nbsp;&nbsp;<a href="https://ieeexplore.ieee.org/document/9770365" target="_blank"><i class="fas fa-share-alt share-icon"></i></a></td>
+							      <td>Numeric/Alphabetic passwords</td>
+							      <td>EM-induced voltages</td>
+							    </tr>
+							    <tr>
+							      <td>WISERS&nbsp;&nbsp;<a href="https://ieeexplore.ieee.org/abstract/document/10179322/" target="_blank"><i class="fas fa-share-alt share-icon"></i></a></td>
+							      <td>Numeric/Alphabetic passwords</td>
+							      <td>EM perturbations</td>
+							    </tr>
+							    <tr>
+							      <td>Ye et al.&nbsp;&nbsp;<a href="https://eprints.whiterose.ac.uk/151222/" target="_blank"><i class="fas fa-share-alt share-icon"></i></a></td>
+							      <td>Pattern lock</td>
+							      <td>Camera-based</td>
+							    </tr>
+							    <tr>
+							      <td>PatternListener&nbsp;&nbsp;<a href="https://arxiv.org/abs/1810.02242" target="_blank"><i class="fas fa-share-alt share-icon"></i></a></td>
+							      <td>Pattern lock</td>
+							      <td>Acoustic</td>
+							    </tr>
+							    <tr>
+							      <td>Dong et al.&nbsp;&nbsp;<a href="https://arxiv.org/abs/1904.04433" target="_blank"><i class="fas fa-share-alt share-icon"></i></a></td>
+							      <td>Face recognition</td>
+							      <td>Camera-based</td>
+							    </tr>
+							    <tr>
+							      <td>Erdogmus et al.&nbsp;&nbsp;<a href="https://ieeexplore.ieee.org/abstract/document/6810829/" target="_blank"><i class="fas fa-share-alt share-icon"></i></a></td>
+							      <td>Face recognition</td>
+							      <td>Camera-based</td>
+							    </tr>
+							    <tr>
+							      <td>Sharif et al.&nbsp;&nbsp;<a href="https://dl.acm.org/doi/abs/10.1145/2976749.2978392" target="_blank"><i class="fas fa-share-alt share-icon"></i></a></td>
+							      <td>Face recognition</td>
+							      <td>Camera-based</td>
+							    </tr>
+							    <tr>
+							      <td>Yang et al.&nbsp;&nbsp;<a href="https://arxiv.org/abs/1811.12026" target="_blank"><i class="fas fa-share-alt share-icon"></i></a></td>
+							      <td>Face recognition</td>
+							      <td>Camera-based</td>
+							    </tr>
+							    <tr>
+							      <td>Zhong et al.&nbsp;&nbsp;<a href="https://arxiv.org/abs/2004.05790" target="_blank"><i class="fas fa-share-alt share-icon"></i></a></td>
+							      <td>Face recognition</td>
+							      <td>Camera-based</td>
+							    </tr>
+							    <tr>
+							      <td><strong>FPLogger (Our work)</strong></td>
+							      <td><strong>In-display fingerprints</strong></td>
+							      <td><strong>EM emanations</strong></td>
+							    </tr>
+							  </tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+					<!--ul>
+						<li class="question">
+							<b> How does GhostTalk work?</b>
+
+								<p class="answer">
+									Since the shared power bank is open to rent for all users, the attackers can rent shared power banks and modify them. After modification, these malicious power banks can compromise smartphone voice assistants, and then <strong class="bold">hack private information, launch ghost call, or steal voice verification codes.</strong>
+												</p>
+					<b>What devices can be compromised by GhostTalk?</b>
+					<p class="answer">
+						New generations of smartphones have discarded 3.5mm headphone jack and integrated the headphone audio functions into the charging port. This innovation revamps the outlook of smartphones, but it imposes new threats to the smartphone audio system when users are charging in public spaces. All the smartphones with Lightning or USB-C charging ports are vulnerable to GhostTalk.
+					</p>
+					<b>What are the key contributions of GhostTalk?</b>
+					<p class="answer">
+						<ul>
+								<li class="answer"> &#9733  GhostTalk can simultaneously achieve two attack goals, i.e., voice injection and eavesdropping</li>
+								<li class="answer">  &#9733 GhostTalk does not require any prior knowledge about the victim's voice, and it can bypass the speaker verification through a backdoor in the charging port</li>
+								<li class="answer"> &#9733  GhostTalk is resilient against strong environmental noises and can bypass liveness detection systems</li>
+						</ul>
+
+					</p>
+
+					<div class ="boxed">
+						<img src="assets/scenarios.jpg" width="800px" height="180px">
+					</div>
+
+					<h2>GhostTalk Sample Audios</h2>
+					<div class ="boxed">
+						<p> These are natural speech audios and injected speech audios via GhostTalk. Can you distinguish them?
+						</p>
+					</div>
+
+					<div style="margin-top=5em;">
+						<h3> Group A </h3>
+						<table>
+						<tr>
+							<td><audio controls>
+									<source src="./assets/01_A.wav" type="audio/wav">
+									Your browser does not support the <code>audio</code> element.
+								</audio></td>
+							<td><audio controls>
+									<source src="./assets/01_B.wav" type="audio/wav">
+									Your browser does not support the <code>audio</code> element.
+								</audio></td>
+						</tr>
+					</table>
+					<h3> Group B </h3>
+					<table><div class="centered">
+							<td><audio controls>
+									<source src="./assets/02_A.wav" type="audio/wav">
+									Your browser does not support the <code>audio</code> element.
+								</audio></td></div>
+							<td><audio controls class="centered">
+									<source src="./assets/02_B.wav" type="audio/wav">
+									Your browser does not support the <code>audio</code> element.
+								</audio></td>
+					</table>
+
+					<h2>GhostTalk Demo</h2>
+					<div class ="centered">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/YUQqMCGIIik" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<h2>GhostTalk-SC Attack</h2>
+					<div class ="boxed">
+						<p>In case when the smartphones are charged by an unaltered standard cable, we discover that it is possible to recover the audio signal from smartphone loudspeakers by monitoring the charging current on the power line.
+						</p>
+						<br>
+						<p>To demonstrate the feasibility, we design GhostTalk-SC (Standard Cable), an adaptive eavesdropper system targeting smartphones charged in public USB ports.  To correctly recognize the private information in the audio, GhostTalk-SC carefully extracts audio spectra and integrates a neural network model to classify spoken digits in the speech. </p>
+		</div>
+		<div class ="centered">
+			<img src="assets/CNN_archi.jpg" width="800px" height="450px">
+		</div>
+			<h2>Countermeasure Recommendations</h2>
+
+					<ul>
+								<li class="answer"> &#9873  Disable the voice assistant activation by headphones.</li>
+								<li class="answer">  &#9873 Add headphone notification. </li>
+								<li class="answer">  &#9873 Stop charging after reaching high percentage battery level. </li>
+					</ul-->
+
+	</body>
+</html>
